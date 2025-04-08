@@ -1,0 +1,44 @@
+{
+    "strategy": {
+        "name": "Day Trading Strategy",
+        "timeframes": ["15m", "1h"],
+        "indicators": {
+            "rsi_period": 14,
+            "rsi_overbought": 70,
+            "rsi_oversold": 30,
+            "sma_fast_period": 20,
+            "sma_slow_period": 50,
+            "bb_period": 20,
+            "bb_std": 2,
+            "macd_fast_period": 12,
+            "macd_slow_period": 26,
+            "macd_signal_period": 9
+        },
+        "risk_management": {
+            "stop_loss_pct": 0.5,
+            "take_profit_pct": 1.0,
+            "max_trades_per_day": 3,
+            "max_risk_per_trade_pct": 1.0
+        }
+    },
+    "backtest": {
+        "initial_capital": 10000,
+        "symbols": ["AAPL", "MSFT", "AMZN", "GOOGL", "META"],
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "trading_hours": {
+            "start": 9,
+            "end": 16
+        }
+    },
+    "data": {
+        "data_dir": "data",
+        "use_cached_data": true
+    },
+    "output": {
+        "save_results": true,
+        "results_dir": "results",
+        "plot_charts": true,
+        "save_trades": true
+    }
+}
